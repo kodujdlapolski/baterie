@@ -10,13 +10,15 @@
       
       $.get(endpoint, function( data ) {
         if (data) {
+          var locationsList = "";
           for (var i=0; i<markers.length; i++) {
             markers[i].setMap(null);
           }
           markers = [];
-
+          
           for (var i=0; i<data.length; i++) {
             var location = data[i];
+            var locationTag = "<div class='location'>" + location.name + "</div>";
 
             var position = new google.maps.LatLng(location.lat, location.lng);
             var marker = new google.maps.Marker({
@@ -36,7 +38,9 @@
 */
 
             markers.push(marker);
+            locationsList = locationsList + " " + locationTag;
           }
+          $('#results').html(locationsList);
         }
       });
       
