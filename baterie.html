@@ -2,13 +2,17 @@
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8">
     <style type="text/css">
       html { height: 100% }
       body { height: 100%; margin: 0; padding: 0 }
       #map-canvas { height: 500px; width: 400px; float: left;}
-	  #results { height: 500px; width: 400px; float: left;}
+      #search {float: left;}
+      #results {float: left;}
     </style>
-	<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" href="css/le-frog/jquery-ui-1.10.3.custom.min.css">
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAenGcJ-uGUsYEiuwzFP0EzngdEDB-KSTs&sensor=false">
     </script>
@@ -17,6 +21,10 @@
   </head>
   <body>
   	<div id="map-canvas"></div>
-  	<div id="results">TEST</div>
+  	<div id="search">
+      <label for="towns">Wyszukaj: </label>
+      <input id="towns">
+    </div>
+    <div id="results">TEST</div>
   </body>
 </html>
